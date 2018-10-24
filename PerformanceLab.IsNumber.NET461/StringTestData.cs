@@ -6,16 +6,20 @@
                                                             {
                                                                 "1",
                                                                 "234",
+                                                                "23456",
                                                                 "456789",
                                                                 "0123456789",
+                                                                "2147483647",
                                                             };
 
         public static readonly string[] InvalidStrings = new string[]
                                                           {
-                                                                "a",
+                                                                "adas",
                                                                 "bgf",
                                                                 "23vbnt",
-                                                                "asdfgt4121cv",
+                                                                "vfd123fd56",
+                                                                "asdfgt4121321cv",
+                                                                "11asdfgt4121321cv",
                                                           };
 
         public static readonly string[] MixedStrings = new string[]
@@ -24,10 +28,8 @@
                                                                  "b",
                                                                 "234",
                                                                 "1234vF",
-                                                                "45678d9",
-                                                                "0123456789",
+                                                                "2147483647",
                                                                 "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-                                                                "0987"
                                                           };
     }
 }

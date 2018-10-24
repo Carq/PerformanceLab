@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 
 namespace PerformanceLab.IsNumber.NET461
 {
@@ -24,13 +25,14 @@ namespace PerformanceLab.IsNumber.NET461
             Console.WriteLine($"Tests ended. Summary:");
             Console.WriteLine();
 
-            var results = new[] { IntParseResult, IntTryParseResult, CustomResult };
+            var results = new[] { IntParseResult, IntTryParseResult, CustomResult }.OrderBy(x => x.GetTotal()).ToArray();
 
             for (int i = 0; i < results.Length; i++)
             {
-                DisplaySummary(i, results[i]);
+                DisplaySummary(i + 1, results[i]);
             }
 
+            Console.WriteLine();
             DisplayDetails(IntParseResult);
             DisplayDetails(IntTryParseResult);
             DisplayDetails(CustomResult);
@@ -45,8 +47,7 @@ namespace PerformanceLab.IsNumber.NET461
 
         private static void DisplayDetails(TestResult testResult)
         {
-            Console.WriteLine($"{IntParseResult.TestMethodName} - Total {IntTryParseResult.GetTotal()}ms");
-            Console.WriteLine($"{IntParseResult.TestMethodName} - Avg {IntTryParseResult.GetAvg()}ms");
+            Console.WriteLine($"{testResult.TestMethodName} - Total: {testResult.GetTotal()}ms Avg: {testResult.GetAvg()}ms");
 
             foreach (var result in testResult.Results)
             {
@@ -67,17 +68,17 @@ namespace PerformanceLab.IsNumber.NET461
         private static void TestInvalidString(int numberOfIterations)
         {
             Console.WriteLine("2/3 - Testing invalid strings...");
-            IntParseResult.AddResult(nameof(StringTestData.ValidStrings), TestMethod(nameof(IsNumbnerTestMethods.IntParse), IsNumbnerTestMethods.IntParse, StringTestData.InvalidStrings, numberOfIterations));
-            IntTryParseResult.AddResult(nameof(StringTestData.ValidStrings), TestMethod(nameof(IsNumbnerTestMethods.IntTryParse), IsNumbnerTestMethods.IntTryParse, StringTestData.InvalidStrings, numberOfIterations));
-            CustomResult.AddResult(nameof(StringTestData.ValidStrings), TestMethod(nameof(IsNumbnerTestMethods.Custom), IsNumbnerTestMethods.Custom, StringTestData.InvalidStrings, numberOfIterations));
+            IntParseResult.AddResult(nameof(StringTestData.InvalidStrings), TestMethod(nameof(IsNumbnerTestMethods.IntParse), IsNumbnerTestMethods.IntParse, StringTestData.InvalidStrings, numberOfIterations));
+            IntTryParseResult.AddResult(nameof(StringTestData.InvalidStrings), TestMethod(nameof(IsNumbnerTestMethods.IntTryParse), IsNumbnerTestMethods.IntTryParse, StringTestData.InvalidStrings, numberOfIterations));
+            CustomResult.AddResult(nameof(StringTestData.InvalidStrings), TestMethod(nameof(IsNumbnerTestMethods.Custom), IsNumbnerTestMethods.Custom, StringTestData.InvalidStrings, numberOfIterations));
         }
 
         private static void TestMixedString(int numberOfIterations)
         {
             Console.WriteLine("3/3 - Testing mixed strings...");
-            IntParseResult.AddResult(nameof(StringTestData.ValidStrings), TestMethod(nameof(IsNumbnerTestMethods.IntParse), IsNumbnerTestMethods.IntParse, StringTestData.MixedStrings, numberOfIterations));
-            IntTryParseResult.AddResult(nameof(StringTestData.ValidStrings), TestMethod(nameof(IsNumbnerTestMethods.IntTryParse), IsNumbnerTestMethods.IntTryParse, StringTestData.MixedStrings, numberOfIterations));
-            CustomResult.AddResult(nameof(StringTestData.ValidStrings), TestMethod(nameof(IsNumbnerTestMethods.Custom), IsNumbnerTestMethods.Custom, StringTestData.MixedStrings, numberOfIterations));
+            IntParseResult.AddResult(nameof(StringTestData.MixedStrings), TestMethod(nameof(IsNumbnerTestMethods.IntParse), IsNumbnerTestMethods.IntParse, StringTestData.MixedStrings, numberOfIterations));
+            IntTryParseResult.AddResult(nameof(StringTestData.MixedStrings), TestMethod(nameof(IsNumbnerTestMethods.IntTryParse), IsNumbnerTestMethods.IntTryParse, StringTestData.MixedStrings, numberOfIterations));
+            CustomResult.AddResult(nameof(StringTestData.MixedStrings), TestMethod(nameof(IsNumbnerTestMethods.Custom), IsNumbnerTestMethods.Custom, StringTestData.MixedStrings, numberOfIterations));
         }
 
         private static long TestMethod(string testName, Func<string, bool> methodToTest, string[] testValidStrings, int numberOfIterations)
