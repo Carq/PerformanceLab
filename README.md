@@ -1,6 +1,6 @@
 # PerformanceLab.IsNumber
 
-## The faster way to check if string is number
+## The fastest way to check if a string is a number
 
 Results for 5 000 000 checks:
 
