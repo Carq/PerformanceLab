@@ -9,7 +9,7 @@ namespace PerformanceLab.IsEmpty
     {
         static void Main(string[] args)
         {
-            const int numberOfIterations = int.MaxValue; ;
+            const int numberOfIterations = int.MaxValue;
 
             Console.WriteLine($"Performance Lab. The faster way to check if string is collection is empty");
             Console.WriteLine($"Number of iterations {numberOfIterations}");
@@ -18,10 +18,10 @@ namespace PerformanceLab.IsEmpty
             var collection5000 = Enumerable.Range(0, 20000).Select(x => x.ToString() + "lorem ipsum").ToList();
 
             var result = TestMethod("Count", CountTestMethod, collection5000, numberOfIterations);
-            Console.WriteLine($"Count: {result}ms");
+            Console.WriteLine($"Count: {result}ms             ");
 
-            result = TestMethod("Any", CountTestMethod, collection5000, numberOfIterations);
-            Console.WriteLine($"Any: {result}ms");
+            result = TestMethod("Any", AnyTestMethod, collection5000, numberOfIterations);
+            Console.WriteLine($"Any: {result}ms               ");
 
             Console.ReadKey();
         }
@@ -35,6 +35,10 @@ namespace PerformanceLab.IsEmpty
             for (int i = 0; i < numberOfIterations; i++)
             {
                 var result = methodToTest(collectionToTest);
+                if (result)
+                {
+                    Console.WriteLine("Is empty!");
+                }
             }
 
             stopwatch.Stop();
