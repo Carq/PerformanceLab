@@ -2,14 +2,14 @@
 
 ## The faster way to check if list if empty
 
-Results for **2 147 483 647** checks for List with 20000 elements:
+Results for **2 147 483 647** checks for **IList** with 20000 elements:
 
 | Method     |       Time        |
 | ---------- | :---------------: |
 | Count == 0 | 14 697 ms (~14s)  |
 | Any()      | 123 660ms (~123s) |
 
-Results for **20000** checks for IEnumerable with 20000 elements:
+Results for **20000** checks for **IEnumerable** with 20000 elements:
 
 | Method       |      Time       |
 | ------------ | :-------------: |
