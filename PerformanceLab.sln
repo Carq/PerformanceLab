@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceLab.IsNumber.NET461", "PerformanceLab.IsNumber.NET461\PerformanceLab.IsNumber.NET461.csproj", "{5370D82E-2F8C-4D7B-8849-3ACE4EBB6B80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceLab.IsNumber", "PerformanceLab.IsNumber\PerformanceLab.IsNumber.csproj", "{5370D82E-2F8C-4D7B-8849-3ACE4EBB6B80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceLab.IsEmpty", "PerformanceLab.IsEmpty\PerformanceLab.IsEmpty.csproj", "{1F869B10-ADAE-4CC8-8D3F-8D2ACC02D3C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueTaskVsTask", "ValueTaskVsTask\ValueTaskVsTask.csproj", "{11167E1D-BE3F-4B41-92E4-F7802C965024}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1F869B10-ADAE-4CC8-8D3F-8D2ACC02D3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F869B10-ADAE-4CC8-8D3F-8D2ACC02D3C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F869B10-ADAE-4CC8-8D3F-8D2ACC02D3C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11167E1D-BE3F-4B41-92E4-F7802C965024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11167E1D-BE3F-4B41-92E4-F7802C965024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11167E1D-BE3F-4B41-92E4-F7802C965024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11167E1D-BE3F-4B41-92E4-F7802C965024}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
