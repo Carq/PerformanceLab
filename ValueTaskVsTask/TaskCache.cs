@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ValueTaskVsTask.Dto;
+using SealedClasses.Dto;
 
-namespace ValueTaskVsTask
+namespace SealedClasses
 {
     public static class TaskCache
     {

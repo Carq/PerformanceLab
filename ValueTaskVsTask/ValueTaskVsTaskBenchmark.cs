@@ -1,8 +1,8 @@
 ﻿using BenchmarkDotNet.Attributes;
 using System.Net.Http.Json;
-using ValueTaskVsTask.Dto;
+using SealedClasses.Dto;
 
-namespace ValueTaskVsTask
+namespace SealedClasses
 {
     [MemoryDiagnoser]
     public class ValueTaskVsTaskBenchmark
@@ -33,7 +33,6 @@ namespace ValueTaskVsTask
         {
             if (TaskCache.Data == null)
             {
-
                 TaskCache.Data = await httpClient.GetFromJsonAsync<IList<HolidayDetailsDto>>("https://date.nager.at/api/v2/publicholidays/2022/PL");
             }
 

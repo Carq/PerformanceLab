@@ -1,6 +1,6 @@
-﻿using ValueTaskVsTask.Dto;
+﻿using SealedClasses.Dto;
 
-namespace ValueTaskVsTask
+namespace SealedClasses
 {
     public class HolidayResultDto
     {

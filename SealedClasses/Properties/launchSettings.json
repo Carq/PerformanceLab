@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VirtualMethods": {
+      "commandName": "Project",
+      "hotReloadEnabled": false
+    }
+  }
+}

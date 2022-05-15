@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceLab.IsNumber", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceLab.IsEmpty", "PerformanceLab.IsEmpty\PerformanceLab.IsEmpty.csproj", "{1F869B10-ADAE-4CC8-8D3F-8D2ACC02D3C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueTaskVsTask", "ValueTaskVsTask\ValueTaskVsTask.csproj", "{11167E1D-BE3F-4B41-92E4-F7802C965024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueTaskVsTask", "ValueTaskVsTask\ValueTaskVsTask.csproj", "{11167E1D-BE3F-4B41-92E4-F7802C965024}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SealedClasses", "SealedClasses\SealedClasses.csproj", "{ADEB8CB8-12A1-48E0-AA54-C6609799E767}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{11167E1D-BE3F-4B41-92E4-F7802C965024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11167E1D-BE3F-4B41-92E4-F7802C965024}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11167E1D-BE3F-4B41-92E4-F7802C965024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADEB8CB8-12A1-48E0-AA54-C6609799E767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADEB8CB8-12A1-48E0-AA54-C6609799E767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADEB8CB8-12A1-48E0-AA54-C6609799E767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADEB8CB8-12A1-48E0-AA54-C6609799E767}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

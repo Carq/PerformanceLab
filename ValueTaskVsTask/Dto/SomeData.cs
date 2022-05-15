@@ -1,6 +1,6 @@
 ﻿namespace SealedClasses.Dto
 {
-    public class HolidayDetailsDto
+    public class SomeData
     {
         public string Date { get; set; }
 

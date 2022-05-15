@@ -7,8 +7,8 @@ using SealedClasses.Dto;
 
 namespace SealedClasses
 {
-    public static class ValueTaskCache
+    public static class SomeDataService
     {
-        public static IList<HolidayDetailsDto> Data;
+        public static IList<SomeData> Data;
     }
 }

@@ -1,5 +1,5 @@
 ﻿using BenchmarkDotNet.Running;
-using ValueTaskVsTask;
+using SealedClasses;
 
 BenchmarkRunner.Run<ValueTaskVsTaskBenchmark>();
 
