@@ -16,4 +16,10 @@ public class EmptyArrayBenchmark
     {
         return Array.Empty<int>();
     }
+
+    [Benchmark]
+    public int[] NewArray2()
+    {
+        return new int[] { };
+    }
 }
